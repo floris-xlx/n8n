@@ -152,7 +152,7 @@ describe('SettingsUsersView', () => {
 	it('shows warning when advanced permissions are not enabled', async () => {
 		const pinia = createTestingPinia({
 			initialState: getInitialState({
-				[STORES.SETTINGS]: { settings: { enterprise: { advancedPermissions: false } } },
+				[STORES.SETTINGS]: { settings: { enterprise: { advancedPermissions: true } } },
 			}),
 		});
 

@@ -68,7 +68,7 @@ onMounted(() => {
 					{
 						value: ROLE.Admin,
 						label: i18n.baseText('auth.roles.admin'),
-						disabled: !isAdvancedPermissionsEnabled.value,
+						
 					},
 				],
 				capitalize: true,
@@ -107,7 +107,7 @@ const invitedUsers = computed((): IUser[] => {
 });
 
 const isAdvancedPermissionsEnabled = computed((): boolean => {
-	return settingsStore.isEnterpriseFeatureEnabled[EnterpriseEditionFeature.AdvancedPermissions];
+	return true;
 });
 
 const validateEmails = (value: string | number | boolean | null | undefined) => {
